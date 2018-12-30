@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gymdw.nuggetcounter.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintBottom_toTopOf="@+id/nugget"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Nugget Counter"
+        app:titleTextColor="@android:color/white">
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/nugget"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginStart="64dp"
+        android:onClick="increaseNum"
+        app:layout_constraintBottom_toTopOf="@+id/numOfNugget"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/nugget" />
+
+    <Button
+        android:id="@+id/submit1"
+        android:layout_width="124dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="27dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phrase" />
+
+    <TextView
+        android:id="@+id/countText"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="64dp"
+        android:text="Nugget Count:"
+        android:textSize="25dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/numOfNugget"
+        app:layout_constraintEnd_toStartOf="@+id/numOfNugget"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/phrase"
+        android:layout_width="0dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="53dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="48dp"
+        android:text="&quot;If ur hotter than me that means I'm cooler than U&quot;"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/submit1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numOfNugget" />
+
+    <TextView
+        android:id="@+id/numOfNugget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:layout_marginEnd="130dp"
+        android:text="0"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/phrase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/countText"
+        app:layout_constraintTop_toBottomOf="@+id/nugget" />
+
+</android.support.constraint.ConstraintLayout>

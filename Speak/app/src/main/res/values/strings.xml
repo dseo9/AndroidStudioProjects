@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Speak</string>
+    <string name="greeting">Hello World!</string>
+    <string name="buttonText">Speak</string>
+</resources>
